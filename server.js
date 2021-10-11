@@ -4,8 +4,8 @@ const cors = require("cors");
 const ShortUrl = require("./models/shortUrl");
 const app = express();
 
-const PORT = process.env.PORT | 5000;
-const host = '0.0.0.0';
+const PORT = process.env.PORT || 5000;
+const host = "0.0.0.0";
 
 require("dotenv").config();
 
@@ -55,6 +55,6 @@ app.get("/:shortUrl", async (req, res) => {
 
 // const PORT = process.env.PORT | 5000;
 
-app.listen(PORT,host, () => {
+app.listen(PORT, host, () => {
   console.log(`Server running on ${PORT}`);
 });
